@@ -1,0 +1,29 @@
+{
+  "title" : "Testowy artykuł",
+  "lead" : "lead testowego artykułu",
+  "signature" : "Daniel N",
+  "photoUrl" : "example.com",
+
+  "createDate" : "2020-03-16T13:56:39.492",
+  "updateDate" : "2020-03-16T13:56:39.492",
+  "bodyPost" : {
+    "paragraphs" : [
+      {
+        "paragraphType" : "text",
+        "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat."
+      },
+      {
+        "paragraphType" : "image",
+        "content" : "example.com/image.jpg"
+      },
+      {
+        "paragraphType" : "bold",
+        "content" : "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+      },
+      {
+        "paragraphType" : "quote",
+        "content" : "Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?"
+      }
+    ]
+  }
+}

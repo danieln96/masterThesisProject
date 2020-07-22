@@ -33,6 +33,11 @@ public class PostController {
                 .orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NO_CONTENT));
     }
 
+    @GetMapping("/title/{title}")
+    public List<Post> findByTitle(@PathVariable final String title) {
+        return postRepository.findAllByTitle(title);
+    }
+
     @GetMapping
     public List<Post> findAll() {
 
@@ -40,8 +45,9 @@ public class PostController {
     }
 
     @PostMapping
-    public ResponseEntity<Post> newEmployee(@RequestBody final Post post) {
-
-        return post != null ? new ResponseEntity<>(postRepository.save(post), HttpStatus.OK) : new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+    public ResponseEntity<Post> createNewPost(@RequestBody final Post post) {
+        return post != null ?
+                new ResponseEntity<>(postRepository.save(post), HttpStatus.CREATED)
+                : new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }
 }

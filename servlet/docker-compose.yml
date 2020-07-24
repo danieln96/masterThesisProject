@@ -1,0 +1,14 @@
+version: "3"
+services:
+  servlet-mongo:
+    image: mongo:latest
+    container_name: "servlet-mongo"
+    ports:
+      - 27018:27017
+  servlet-spring-boot-app:
+    build: .
+    image: master-thesis/servlet
+    ports:
+      - 8080:8080
+    links:
+      - servlet-mongo

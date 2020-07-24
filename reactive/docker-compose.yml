@@ -1,0 +1,14 @@
+version: "3"
+services:
+  reactive-mongo:
+    image: mongo:latest
+    container_name: "reactive-mongo"
+    ports:
+      - 27019:27017
+  reactive-spring-boot-app:
+    build: .
+    image: master-thesis/reactive
+    ports:
+      - 8070:8080
+    links:
+      - reactive-mongo

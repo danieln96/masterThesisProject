@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.sggw.niczyporuk.dto.Post;
+import pl.sggw.niczyporuk.dto.post.Post;
 import pl.sggw.niczyporuk.reactive.repository.PostRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

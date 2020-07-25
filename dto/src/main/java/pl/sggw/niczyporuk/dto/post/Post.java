@@ -1,4 +1,4 @@
-package pl.sggw.niczyporuk.dto;
+package pl.sggw.niczyporuk.dto.post;
 
 import lombok.Builder;
 import lombok.Data;

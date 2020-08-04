@@ -1,10 +1,10 @@
 package pl.sggw.niczyporuk.servlet.repository;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import pl.sggw.niczyporuk.dto.post.Post;
-
-import java.util.List;
 
 public interface PostRepository extends MongoRepository<Post, String> {
 

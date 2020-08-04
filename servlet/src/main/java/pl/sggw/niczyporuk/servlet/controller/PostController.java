@@ -1,5 +1,7 @@
 package pl.sggw.niczyporuk.servlet.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,8 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import pl.sggw.niczyporuk.dto.post.Post;
 import pl.sggw.niczyporuk.servlet.repository.PostRepository;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/post")

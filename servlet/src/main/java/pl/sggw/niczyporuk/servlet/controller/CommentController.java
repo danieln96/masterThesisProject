@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import pl.sggw.niczyporuk.dto.comment.Comment;
+import pl.sggw.niczyporuk.servlet.exception.ForbiddenCommentException;
+import pl.sggw.niczyporuk.servlet.exception.PostNotFoundException;
 import pl.sggw.niczyporuk.servlet.repository.CommentRepository;
 import pl.sggw.niczyporuk.servlet.repository.PostRepository;
 import pl.sggw.niczyporuk.servlet.service.CommentService;
@@ -52,17 +54,17 @@ public class CommentController {
     }
 
     @PostMapping
-    public ResponseEntity<Comment> addCommentToPost( @RequestBody final Comment comment) {
+    public ResponseEntity<Comment> addCommentToPost(@RequestBody final Comment comment) {
 
         if (comment != null) {
             if (postRepository.existsById(comment.getPostId())) {
                 if (commentService.hasForbiddenWords(comment.getContent())) {
-                    return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
+                    throw new ForbiddenCommentException("Comment has forbidden words");
                 } else {
                     return new ResponseEntity<>(commentRepository.save(comment), HttpStatus.OK);
                 }
             } else {
-                return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+                throw new PostNotFoundException(String.format("Post not found for comment with id: %s", comment.getPostId()));
             }
         }
 

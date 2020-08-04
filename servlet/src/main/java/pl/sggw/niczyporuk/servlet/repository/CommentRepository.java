@@ -1,10 +1,10 @@
 package pl.sggw.niczyporuk.servlet.repository;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import pl.sggw.niczyporuk.dto.comment.Comment;
-
-import java.util.List;
 
 public interface CommentRepository extends MongoRepository<Comment, String> {
 

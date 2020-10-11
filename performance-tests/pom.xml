@@ -11,8 +11,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <encoding>UTF-8</encoding>
 
-        <gatling.version>3.3.1</gatling.version>
-        <gatling-maven-plugin.version>3.0.5</gatling-maven-plugin.version>
+        <gatling.version>3.4.0</gatling.version>
+        <gatling-maven-plugin.version>3.1.0</gatling-maven-plugin.version>
 
         <typesafe-config.version>1.3.2</typesafe-config.version>
         <simulation>GetPostSimulation</simulation>
@@ -48,18 +48,6 @@
                 <groupId>io.gatling</groupId>
                 <artifactId>gatling-maven-plugin</artifactId>
                 <version>${gatling-maven-plugin.version}</version>
-                <configuration>
-                    <simulationClass>pl.sggw.niczyporuk.performance.tests.simulations.GetPostSimulation
-                    </simulationClass>
-                    <jvmArgs>
-                        <jvmArg>-Denv=${env}</jvmArg>
-                        <jvmArg>-Dusers=${users}</jvmArg>
-                        <jvmArg>-Drampup=${rampup}</jvmArg>
-                        <jvmArg>-Dduration=${duration}</jvmArg>
-                        <jvmArg>-Dthroughput=${throughput}</jvmArg>
-                    </jvmArgs>
-                    <propagateSystemProperties>true</propagateSystemProperties>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
@@ -67,7 +55,7 @@
                 <version>4.4.0</version>
                 <configuration>
                     <jvmArgs>
-                        <jvmArg>-Xss100M</jvmArg>
+                        <jvmArg>-Xss1024M</jvmArg>
                     </jvmArgs>
                 </configuration>
                 <executions>

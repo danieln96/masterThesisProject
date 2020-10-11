@@ -50,7 +50,7 @@ public class InitDataService {
     private List<Post> generatePosts() {
         List<Post> posts = new ArrayList<>();
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100; i++) {
             posts.add(Post.builder()
                     .lead(faker.lorem().characters(100, 256))
                     .photoUrl(faker.internet().url())
@@ -80,7 +80,7 @@ public class InitDataService {
     private List<Comment> generateComments(Post post) {
         List<Comment> comments = new ArrayList<>();
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 20; i++) {
             comments.add(Comment.builder()
                     .postId(post.getId())
                     .signature(faker.animal().name())

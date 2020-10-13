@@ -7,7 +7,7 @@ scrape_configs:
     scrape_interval: 10s
     metrics_path: '/actuator/prometheus'
     static_configs:
-      - targets: ['reactive-spring-boot-app:8070']
+      - targets: ['reactive-spring-boot-app:8080']
   - job_name: 'grafana'
     scrape_interval: 10s
     metrics_path: '/metrics'

@@ -5,11 +5,11 @@ import pl.sggw.niczyporuk.performance.tests.scenarios.CommentScenario
 
 import scala.concurrent.duration.DurationInt
 
-class CommentSimulation extends Simulation {
+class ValidCommentSimulation extends Simulation {
 
-  val insertInvalidCommentsExec = CommentScenario.insertInvalidComment
+
+  val insertValidCommentsExec = CommentScenario.insertValidComment
     .inject(constantUsersPerSec(400) during (60 seconds))
 
-  setUp(insertInvalidCommentsExec)
-
+  setUp(insertValidCommentsExec)
 }

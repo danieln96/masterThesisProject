@@ -1,26 +1,53 @@
-MASTER THESIS
+#MASTER THESIS
 
-MODULES:
+##MODULES:
 - dto
 - reactive
 - servlet
 
-<h3>Usage</h3>
+##Usage
 
-<h4>REACTIVE:</h4>
-- cd reactive
-- mvn clean install
-- docker build -t master-thesis/reactive .
-- docker-compose up
+##REACTIVE:
+```bash
+cd reactive
+```
+```bash
+mvn clean install
+```
+```bash
+docker build -t master-thesis/reactive .
+```
+```bash
+docker-compose up
+```
 
-<h4>SERVLET:</h4>
-- cd servlet
-- mvn clean install
-- docker build -t master-thesis/servlet .
-- docker-compose up
+##SERVLET:
+```bash
+cd servlet
+```
+```bash
+mvn clean install
+```
+```bash
+docker build -t master-thesis/servlet .
+```
+```bash
+docker-compose up
+```
 
-<h4>GATLING TESTS:</h4>
-- cd performance-tests
-- mvn clean gatling:test -Dgatling.simulationClass=pl.sggw.niczyporuk.performance.tests.simulations.CommentSimulation
-- mvn clean gatling:test -Dgatling.simulationClass=pl.sggw.niczyporuk.performance.tests.simulations.PostSimulation
-- report in target/gatling
+##GATLING TESTS:
+```bash
+cd performance-tests
+```
+
+```bash
+mvn clean gatling:test -Dgatling.simulationClass=pl.sggw.niczyporuk.performance.tests.simulations.InvalidCommentSimulation
+```
+```bash
+mvn clean gatling:test -Dgatling.simulationClass=pl.sggw.niczyporuk.performance.tests.simulations.ValidCommentSimulation
+```
+```bash 
+mvn clean gatling:test -Dgatling.simulationClass=pl.sggw.niczyporuk.performance.tests.simulations.PostSimulation
+```
+
+#####report in target/gatling

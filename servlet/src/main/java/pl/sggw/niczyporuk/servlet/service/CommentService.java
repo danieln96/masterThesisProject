@@ -17,7 +17,7 @@ import pl.sggw.niczyporuk.servlet.repository.PostRepository;
 @Service
 public class CommentService {
 
-    private static final List<String> forbiddenWords = Arrays.asList("first", "second", "third");
+    private static final List<String> forbiddenWords = Arrays.asList("first", "eleventh", "second", "twelfth", "third", "thirteenth", "fourth", "fourteenth", "fifth", "fifteenth", "sixth", "sixteenth", "seventh", "seventeenth", "eighth", "eighteenth", "ninth", "nineteenth", "tenth", "twentieth");
 
     private final PostRepository postRepository;
     private final CommentRepository commentRepository;
@@ -57,12 +57,7 @@ public class CommentService {
 
     private boolean hasForbiddenWords(final String content) {
 
-        for (final String word : forbiddenWords) {
-            if (content.contains(word)) {
-                return true;
-            }
-        }
-
-        return false;
+        return forbiddenWords.stream()
+                .anyMatch(content::contains);
     }
 }

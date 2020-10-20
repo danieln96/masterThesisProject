@@ -5,6 +5,12 @@ import pl.sggw.niczyporuk.performance.tests.requests.PostRequest
 
 object PostScenario {
 
-  val getPostScenario = scenario("Get post scenario")
+  val insertPost = scenario("insert post")
     .exec(PostRequest.create_post)
+
+  val getPostsPaginated = scenario("get post paginated")
+    .exec(PostRequest.get_post_random_page)
+
+  val getAllPosts = scenario("get all posts")
+    .exec(PostRequest.get_all_posts)
 }

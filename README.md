@@ -1,13 +1,13 @@
-#MASTER THESIS
+<h1>MASTER THESIS</h1>
 
-##MODULES:
+MODULES:
 - dto
 - reactive
 - servlet
 
-##Usage
+<h2>Usage</h2>
 
-##REACTIVE:
+<h2>REACTIVE:</h2>
 ```bash
 cd reactive
 ```
@@ -21,7 +21,7 @@ docker build -t master-thesis/reactive .
 docker-compose up
 ```
 
-##SERVLET:
+<h2>SERVLET:</h2>
 ```bash
 cd servlet
 ```
@@ -35,7 +35,7 @@ docker build -t master-thesis/servlet .
 docker-compose up
 ```
 
-##GATLING TESTS:
+<h2>GATLING TESTS:</h2>
 ```bash
 cd performance-tests
 ```
@@ -50,4 +50,4 @@ mvn clean gatling:test -Dgatling.simulationClass=pl.sggw.niczyporuk.performance.
 mvn clean gatling:test -Dgatling.simulationClass=pl.sggw.niczyporuk.performance.tests.simulations.PostSimulation
 ```
 
-#####report in target/gatling
+<h3>report in target/gatling</h3>
